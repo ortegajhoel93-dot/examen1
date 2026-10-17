@@ -1,5 +1,5 @@
 /* EXAMEN SEGUNDO PARCIAL - DESARROLLO WEB I
-   Estudiante: __________________________
+   Estudiante:m__________________________
    Curso: _______________________________
 
    INSTRUCCIONES: Implementar aquí TODO el CSS.
@@ -16,12 +16,18 @@
    9. Media queries: tablet <= 900px; móvil <= 600px
 */ 
 *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      
-    }
+    box-sizing: border-box;
+}
+/*Darle estilo al fondo de la pagina como margenes, colores, etc*/
+body{
+    margin: 0;
+    padding: 32px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3E4C52;
+    background-color: white;
+    padding-top: 80px;
+}
+
     /*
    ESTILOS DEL ENCABEZADO (HEADER)
     */
@@ -31,12 +37,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(15, 23, 42, 0.9); /* Fondo oscuro elegante con ligera transparencia */
     backdrop-filter: blur(10px); /* Efecto cristal esmerilado moderno */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.3s ease;
+    color: black;
 }
 
 /* Contenedor flexible para alinear los elementos de lado a lado */
@@ -55,7 +61,6 @@
     align-items: center;
     text-decoration: none;
 }
-
 .marca img {
     border-radius: 8px;
     object-fit: contain;
@@ -93,7 +98,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #3b82f6; /* Azul deportivo */
+    background-color: black; /* Azul deportivo */
     transition: width 0.3s ease;
     border-radius: 2px;
 }
@@ -116,7 +121,7 @@
 }
 
 .boton-cabecera:hover {
-    background-color: #2563eb;
+    background-color: #172543;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -131,46 +136,390 @@
     }
 }
 
-
-
-
-.vehiculo-grid{
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 20px;
-   border-radius: 15px;
-   border: solid 2px black;
-   padding: 2px;
-   align-items: start;
+/*Estilo de texto para la portada principal*/
+.etiqueta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
 }
-
-.vehiculo-card{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-}
-
-.vehiculo-card img{
-   width: 100px;
-   height: 100px;
-   object-fit: cover;
-     border-radius: 15px;
-   border: solid 2px black;
+#titulo-vehiculos, p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
 }
 
 
 
-
-
-
-
+/*Estilo de la portada principal*/
 .hero-contenido{
     overflow-x: auto;
-    background-color: white;
+    background-color: #233958;
     border: #3E4C52 solid 1px;
     border-radius: 20px;
     box-shadow: 0px 1px 24px #3E4C52;
     display: flex;
     align-items: center;
     gap: 20px;
+}
+/*Darle color y estilo a las letras del titulo principal*/
+#titulo-principal{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+.hero-texto p{
+    color: white;
+}
+.etiqueta{
+    color: #B8860B;
+    font-size: 20px;
+}
+ 
+/*Darle estilo a la imagen de automovil destacado*/
+.hero-imagen{
+    margin: 30px;
+   border-radius: 15px;
+}
+
+/*Organiza las imagenes de los vehiculos en 3 columnas una al lado de la otra*/
+.vehiculo-grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+
+}
+/*Crea el cuadro de separacion de cada una*/
+.vehiculo-card{
+    border: 1px solid black;
+    border-radius: 0px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+/*Controla el tamaño de las imagenes de los vehiculos*/
+.vehiculo-card img{
+   width: 150px;
+   height: 125px;
+   object-fit: cover;
+     border-radius: 15px;
+}
+
+/*Modifica los botones-secundarios para darle color y tamaños*/
+.boton-secundario{
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color: #080752;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;   
+}
+.boton-secundario:hover{
+    background-color: #0d0da7;
+}
+/*Modifica los colores de los botones principales*/
+.boton-principal{
+    display: inline-block;
+    padding: 8px 12px;
+    color: black;
+    background-color: #B8860B;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600; 
+
+}
+.boton-principal:hover{
+    background-color: #D4AF37;
+}
+
+/*Modifica el estilo del boton "contactanos" que es una class: boton-claro*/
+.boton-claro{
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color: #080752;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;   
+
+}
+.boton-claro:hover{
+    background-color: #0d0da7;
+}
+
+
+
+:root {
+  --color-primario: #c29b61;
+  --color-fondo-seccion: #f4f6f9;
+  --color-oscuro: #111d28;
+  --color-texto: #000000;
+  --color-texto-claro: #666666;
+  --color-blanco: #ffffff;
+  --color-borde: #e1e8ed;
+}
+
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  padding: 80px 0;
+}
+
+
+/* SECCIÓN: NOSOTROS */
+
+.nosotros {
+  background-color: #f8fafc;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.nosotros-texto h2 {
+  font-size: 2.5rem;
+  color: var(--color-oscuro);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Beneficios Grid (Tarjetas blancas) */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.beneficio {
+  background-color: var(--color-blanco);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.beneficio-icono {
+  font-size: 1.2rem;
+  color: var(--color-primario);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.beneficio h3 {
+  font-size: 1rem;
+  color: var(--color-oscuro);
+  margin: 0 0 8px 0;
+}
+
+.beneficio p {
+  font-size: 0.9rem;
+  color: var(--color-texto-claro);
+  margin: 0;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.boton-principal {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.boton-principal:hover {
+  background-color: #b0894f;
+}
+
+
+/* SECCIÓN: CONTACTO */
+
+.contacto {
+  background-color: var(--color-blanco);
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contacto-texto h2 {
+  font-size: 2.2rem;
+  color: var(--color-oscuro);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contacto-texto p {
+  color: var(--color-texto-claro);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Formulario */
+.formulario {
+  background-color: #f8fafc;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.formulario-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+  margin-bottom: 8px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  background-color: var(--color-blanco);
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+.aceptacion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--color-texto-claro);
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.boton-enviar {
+  width: 100%;
+  font-size: 1rem;
+}
+
+
+/* SECCIÓN: PIE DE PÁGINA (FOOTER) */
+.pie-pagina {
+  background-color: #0b131a; 
+  color: var(--color-blanco);
+  padding: 60px 0 30px 0;
+}
+
+.pie-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.pie-pagina h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.pie-pagina h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--color-blanco);
+}
+
+.pie-pagina p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.pie-pagina ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pie-pagina ul li {
+  margin-bottom: 10px;
+}
+
+.pie-pagina ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.pie-pagina ul li a:hover {
+  color: var(--color-blanco);
+}
+
+.pie-inferior {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  text-align: center;
+}
+
+.pie-inferior p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* RESPONSIVO (Adaptabilidad para pantallas pequeñas) */
+
+@media (max-width: 900px) {
+  .nosotros-grid,
+  .contacto-grid,
+  .pie-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
 }
