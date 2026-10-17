@@ -1,0 +1,176 @@
+/* EXAMEN SEGUNDO PARCIAL - DESARROLLO WEB I
+   Estudiante: __________________________
+   Curso: _______________________________
+
+   INSTRUCCIONES: Implementar aquí TODO el CSS.
+   No modificar la estructura HTML ni los nombres de las clases.
+
+   1. Estilos generales, tipografía y contenedor
+   2. Header y navegación (Flexbox)
+   3. Portada principal (Flexbox)
+   4. Catálogo de 6 vehículos (CSS Grid)
+   5. Tarjetas, botones, hover y sombras
+   6. Nosotros y beneficios (Grid / Flexbox)
+   7. Formulario y estados :focus
+   8. Footer
+   9. Media queries: tablet <= 900px; móvil <= 600px
+*/ 
+*{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    /*
+   ESTILOS DEL ENCABEZADO (HEADER)
+    */
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.9); /* Fondo oscuro elegante con ligera transparencia */
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado moderno */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Contenedor flexible para alinear los elementos de lado a lado */
+.encabezado-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo para el logo  marca */
+.marca {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.marca img {
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Menú de navegación principal */
+.navegacion .menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion .menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navegacion .menu a:hover,
+.navegacion .menu a:focus {
+    color: #ffffff;
+}
+
+/* Línea indicadora moderna al pasar el cursor */
+.navegacion .menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6; /* Azul deportivo */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.navegacion .menu a:hover::after {
+    width: 100%;
+}
+
+/* Ajustes específicos para el botón del encabezado */
+.boton-cabecera {
+    padding: 8px 18px !important;
+    font-size: 0.9rem !important;
+    border-radius: 30px !important;
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+    box-shadow: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.boton-cabecera:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Adaptabilidad responsiva para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navegacion {
+        display: none; 
+    }
+    
+    .encabezado-contenido {
+        padding: 12px 16px;
+    }
+}
+
+
+
+
+.vehiculo-grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   border-radius: 15px;
+   border: solid 2px black;
+   padding: 2px;
+   align-items: start;
+}
+
+.vehiculo-card{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.vehiculo-card img{
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+     border-radius: 15px;
+   border: solid 2px black;
+}
+
+
+
+
+
+
+
+.hero-contenido{
+    overflow-x: auto;
+    background-color: white;
+    border: #3E4C52 solid 1px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 24px #3E4C52;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
